@@ -1,0 +1,115 @@
+/* === Reset / base === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.down{
+    color: #a41313;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Encabezado === */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-bottom: 2px solid #ccc;
+}
+
+header img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* === Contenido principal === */
+main {
+  flex: 1;
+  display: flex;
+  padding: 1rem;
+  position: relative;
+}
+
+/* === Aside (formulario) === */
+aside {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+aside h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #a41313;
+}
+
+/* === Footer (línea decorativa) === */
+footer {
+  height: 6px;
+  background: linear-gradient(to right, #c62828 50%, #000 50%);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  aside {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
